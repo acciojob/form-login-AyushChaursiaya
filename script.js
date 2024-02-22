@@ -1,17 +1,16 @@
-// script.js
 
-// Function to get form values and display them using alert
-function getFormValues() {
-  // Get the form element
-  var form = document.getElementById('myForm');
+document.addEventListener("DOMContentLoaded", function() {
+  var form = document.getElementById("myForm");
+  form.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+    
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastName").value;
 
-  // Get the values of the First and Last Name input fields
-  var firstName = form.elements['firstName'].value;
-  var lastName = form.elements['lastName'].value;
+    // Concatenate first and last name
+    var fullName = firstName + " " + lastName;
 
-  // Display the values using alert
-  alert('First Name: ' + firstName + '\nLast Name: ' + lastName);
-}
-
-// Event listener for form submission
-document.getElementById('submitBtn').addEventListener('click', getFormValues);
+    // Show alert with full name
+    alert(fullName);
+  });
+});
