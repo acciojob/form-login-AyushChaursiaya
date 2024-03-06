@@ -1,4 +1,4 @@
 /*  your css code here. If applicable */
-input:nth-child(7) {
+input[value="Submit"] {
 	background-color: #34b4e3;
 }
