@@ -1,4 +1,4 @@
 /*  your css code here. If applicable */
-input[type="submit"] {
+input[name="fname"] {
 	background-color: #34b4e3;
 }
